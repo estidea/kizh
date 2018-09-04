@@ -1,0 +1,171 @@
+.cd-side-navigation a{
+	padding: 3em 0 2.93em;
+}
+
+.cd-side-navigation::before {
+    background-color: #02010A;
+}
+
+.cd-side-navigation a {
+    color: #bfbfbf;
+}
+
+.no-touch .cd-side-navigation a:hover {
+    background-color: #000000;
+    color: beige;
+}
+
+#logo {
+	position: absolute;
+	max-width: 461px;
+	right:10vw;
+	bottom:10vh;
+	width: 40vw;
+}
+
+.cd-title {
+    top: 0;
+    margin-top: 24vh;
+    width: 70%;
+    margin-left: 10%;
+    max-width: 800px;
+}
+
+.cd-title h2 {
+    margin-left: -0.1rem;
+}
+
+.cd-title span {
+    font-size: 2.3rem;
+    line-height: 3rem;
+}
+
+.row {
+	width:100%;
+	height:580px;
+}
+
+.prt-7 {
+	width:58%;
+	height:100%;
+	float:left;
+}
+
+.prt-5 {
+	width:42%;
+	float:left;
+	height:100%;
+}
+
+.cd-content {
+	padding:0;
+}
+
+#last-prt {
+	background:url('../img/last.png') no-repeat;
+	background-size: cover;
+}
+
+#last-1-prt {
+	background:url('../img/last-1.png') no-repeat;
+	background-size: cover;
+}
+
+#last-2-prt {
+	background:url('../img/last-2.png') no-repeat;
+	background-size: cover;
+}
+
+#last-3-prt {
+	background:url('../img/last-3.png') no-repeat;
+	background-size: cover;
+}
+
+/* CONTACT FORM */
+#contact-form {
+	flex-direction: column;
+    align-items: center;	
+    padding:10rem;
+}
+
+.form-title {
+	color: #000000;
+    font-size: 3rem;
+}
+
+#contactForm {
+	padding: 60px 0;
+}
+
+.form-input {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 670px;
+    height: 60px;
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #f7f7f2;
+    font-size: 30px;
+    padding: 15px 20px;
+      font-family: "PT Sans", sans-serif;
+}
+
+.form-label {
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 15px 0;
+    color: #000000;
+    display: table;
+}
+
+.form-textarea {
+ 	border: 1px solid #000000;
+  box-sizing: border-box;
+  width: 670px;
+  background-color: #f7f7f2;;
+  height: 90px;
+	  font-family: "PT Sans", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 30px;
+	padding: 10px 20px;
+  margin-bottom: 40px;
+}
+
+.btn-black {
+
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 2rem;
+	text-align: center;
+	display: block;
+	color: #FFFFFF;
+
+	max-width: 300px;
+    width: 100%;
+	height: 60px;
+	background: #02010A;
+	cursor: pointer;
+  	border: 2px solid #02010A;
+}
+
+/*  ANTI SCROLL*/
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}

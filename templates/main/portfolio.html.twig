@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="cd-side-navigation">
+		<ul>
+			<li>
+				<a href="#0" data-menu="index">
+					Главная
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" class="selected" data-menu="portfolio"> 
+					Работы 
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-menu="contacts">
+					Контакты
+				</a>
+			</li>
+		</ul>
+	</nav> <!-- .cd-side-navigation -->
+	
+	<main class="cd-main">
+		<section class="cd-section portfolio visible">
+<!-- 			<header>
+				<div class="cd-title">
+					<h2>Services</h2>
+					<span>Some text here</span>
+				</div>
+			</header> -->
+
+			<div class="cd-content" id="portfolio-content">
+				<div class="row">
+					<div class="prt-7" id="last-prt"></div>
+					<div class="prt-5" id="last-1-prt"></div>
+				</div>
+				<div class="row">
+					<div class="prt-5" id="last-2-prt"></div>
+					<div class="prt-7" id="last-3-prt"></div>
+				</div>
+			</div> <!-- .cd-content -->
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->
+
+	<div id="cd-loading-bar" data-scale="1" class="services"></div> <!-- lateral loading bar -->
+{% endblock %}

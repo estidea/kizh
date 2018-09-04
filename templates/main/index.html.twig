@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="cd-side-navigation">
+		<ul>
+			<li>
+				<a href="#0" class="selected" data-menu="index">
+					Главная
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-menu="portfolio"> 
+					Работы 
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-menu="contacts">
+					Контакты
+				</a>
+			</li>
+		</ul>
+	</nav> <!-- .cd-side-navigation -->
+	
+	<main class="cd-main">
+		<section class="cd-section index visible">
+			<header>
+				<div class="cd-title">
+					<h2>Студия Киреева-Журенко</h2>
+					<span>Мы решаем вашу проблему конкретным способом. А потом уже. Мы делаем визуальное брендирование, упаковку продукта, разрабатываем сайты и дизайн приложений.</span>
+
+				</div>
+			<img src="{{ asset('img/logo.png') }}" id="logo">
+			</header>
+
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->
+
+	<div id="cd-loading-bar" data-scale="1" class="index"></div> <!-- lateral loading bar -->
+{% endblock %}

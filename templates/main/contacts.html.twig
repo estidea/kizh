@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="cd-side-navigation">
+		<ul>
+			<li>
+				<a href="#0" data-menu="index">
+					Главная
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-menu="portfolio"> 
+					Работы 
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" class="selected" data-menu="contacts">
+					Контакты
+				</a>
+			</li>
+		</ul>
+	</nav> <!-- .cd-side-navigation -->
+	
+	<main class="cd-main">
+		<section class="cd-section projects visible">
+			<header id="contact-form">
+				<div class="form-title">
+					<h3>Форма обратной связи</h3>
+				</div>
+				<form id="contactForm" name="sentMessage" autocomplete="off">
+					<p class="formTitle"></p>
+					<p class="msgs"></p>
+
+						<label for="username" class="form-label">Имя</label>
+						<input class="form-input" id="username" name="uname" type="text" tabindex="0" required data-validation-required-message="Пожалуйста, введите ваше имя">
+
+
+						<label for="connect-method" class="form-label">Email или телефон (Telegram)</label>
+						<input class="form-input" id="connect-method" name="connect-method" type="text" required data-validation-required-message="Please enter your email address.">
+
+						<label for="message" class="form-label">Несколько слов о вашем проекте</label>
+						<textarea class="form-textarea" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+
+					<input name="formInfo" class="formInfo" type="hidden" value="" title="baaaaa"/>
+					<input type="submit" id="sendMessageButton" name="send" class="btn-black" value="Отправить" />
+		    	</form>
+			</header>
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->
+
+	<div id="cd-loading-bar" data-scale="1" class="projects"></div> <!-- lateral loading bar -->
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script src="{{ asset('js/form.js') }}"></script>
+{% endblock %}

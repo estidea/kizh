@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Options;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,8 +14,17 @@ class MainController extends Controller
      */
     public function main()
     {
+    	$options = $this->getDoctrine()->getRepository(Options::class);
+
+		$site_name = $options
+			->findOneBy(['keyname' => 'site_name'])
+			->getValue();
+		$site_description = $options->findOneBy(['keyname' => 'site_description'])
+			->getValue();
+
         return $this->render('main/index.html.twig', [
-            'controller_name' => 'MainController',
+            'site_name' => $site_name,
+            'site_description' => $site_description
         ]);
     }
 

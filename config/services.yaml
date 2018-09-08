@@ -37,3 +37,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Options }
         public: true
+
+    admin.projects:
+        class: App\Admin\ProjectsAdmin
+        arguments: [~, App\Entity\Projects, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Projects }
+        public: true

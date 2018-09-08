@@ -1,49 +1,70 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
 <nav class="cd-side-navigation">
 		<ul>
 			<li>
-				<a href="#0" data-menu="index">
+				<a href="#0" class="menu-item" data-menu="index">
 					Главная
 				</a>
 			</li>
 
 			<li>
-				<a href="#0" class="selected" data-menu="portfolio"> 
+				<a href="#0" class="menu-item selected" data-menu="portfolio"> 
 					Работы 
 				</a>
 			</li>
 
 			<li>
-				<a href="#0" data-menu="contacts">
+				<a href="#0" class="menu-item" data-menu="contacts">
 					Контакты
 				</a>
 			</li>
 		</ul>
 	</nav> <!-- .cd-side-navigation -->
-	
 	<main class="cd-main">
 		<section class="cd-section portfolio visible">
-<!-- 			<header>
-				<div class="cd-title">
-					<h2>Services</h2>
-					<span>Some text here</span>
-				</div>
-			</header> -->
-
 			<div class="cd-content" id="portfolio-content">
-				<div class="row">
-					<div class="prt-7" id="last-prt"></div>
-					<div class="prt-5" id="last-1-prt"></div>
-				</div>
-				<div class="row">
-					<div class="prt-5" id="last-2-prt"></div>
-					<div class="prt-7" id="last-3-prt"></div>
-				</div>
+				{% for project in projects %}
+			        <a href="#" id="load_project" class="prt-6" data-id="{{project.id}}">
+			        	<div 
+			        	style="{{
+			        		"background:url('../img/#{project.imageUrl}') no-repeat; 
+			        		background-size: cover;
+
+			        		" 
+			        	}}">
+			        	</div>
+			        	<div id="" class="hover-overlay">
+			        		<span>{{project.name}}</span>
+			        		<h3>{{project.title}}</h3>
+			        	</div>
+			    	</a>
+			    	
+			    {% endfor %}
 			</div> <!-- .cd-content -->
+			<div id="project-detail">
+	            <div class="project-detail-content">
+	            	<div class="half-side-project">
+		                <div id="project-close"></div>
+		                <span id="project-name"></span>
+		                <h3 id="project-title"></h3>
+		                <p id="project-description"></p>
+					</div>
+					<div class="half-side-project">
+	                	<img id="project-image" src="">
+	                </div>
+	                <p id="project-text"></p>
+	            </div>
+	        </div>
 		</section> <!-- .cd-section -->
+		
 	</main> <!-- .cd-main -->
 
 	<div id="cd-loading-bar" data-scale="1" class="services"></div> <!-- lateral loading bar -->
+
+
+				
+
 {% endblock %}

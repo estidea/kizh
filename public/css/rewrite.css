@@ -57,29 +57,21 @@
 	height:100%;
 }
 
+.prt-6 {
+    width:50%;
+    float:left;
+    height:580px;
+}
+
+.prt-6 div {
+    width:100%;
+    height:100%;
+}
+
 .cd-content {
 	padding:0;
 }
 
-#last-prt {
-	background:url('../img/last.png') no-repeat;
-	background-size: cover;
-}
-
-#last-1-prt {
-	background:url('../img/last-1.png') no-repeat;
-	background-size: cover;
-}
-
-#last-2-prt {
-	background:url('../img/last-2.png') no-repeat;
-	background-size: cover;
-}
-
-#last-3-prt {
-	background:url('../img/last-3.png') no-repeat;
-	background-size: cover;
-}
 
 /* CONTACT FORM */
 #contact-form {
@@ -165,7 +157,122 @@ html {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
+
+.hover-overlay {
+    position: relative;
+    transition: 0.3s;
+    opacity:0;
+    width:100%;
+    height:580px;
+    top:-580px;
+    background-color:rgba(0, 0, 0, 0.61);
+}
+
+.hover-overlay:hover {
+    opacity:1;
+    transition: 0.3s;
+}
+
+.hover-overlay span{
+    position: relative;
+    left: 90px;
+    top: 90px;
+    max-width: 70%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.hover-overlay h3 {
+    position: relative;
+    left: 90px;
+    top: 111px;
+    max-width: 70%;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 42px;
+
+    color: #FFFFFF;
+}
+
+#project-detail{
+    opacity: 0;
+    padding: 10rem;
+
+    width:100%;
+    height: 100%;
+    background-color: white;
+    z-index:-1;
+
+    position: fixed; 
+    overflow-y: scroll;
+    top: 0; 
+    left: 90px;
+    right: 0;
+    bottom: 0;
+    color:black;
+    transition: 0.5s;
+}
+
+#project-detail-content {
+    height: 100%;
+    overflow: scroll;
+    color:black;
+}
+
+#project-close {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    right: 18rem;
+    top: 10rem;
+    background: url('../img/Close.svg') no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#project-name {
+    position: relative;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 28px;
+}
+
+#project-title {
+    position: relative;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+#project-description {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+}
+
+#portfolio-content {
+    overflow:auto;
+    height: 100%;
+}
+
+#cd-loading-bar {
+    z-index: 4;
+}
+
+.half-side-project {
+    width:50%;
+    float: left;
 }

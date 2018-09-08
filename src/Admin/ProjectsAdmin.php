@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class ProjectsAdmin extends AbstractAdmin
 {
@@ -16,7 +17,7 @@ class ProjectsAdmin extends AbstractAdmin
         $formMapper->add('description', TextType::class);
         $formMapper->add('name', TextType::class);
         $formMapper->add('image_url', TextType::class);
-        $formMapper->add('text', TextType::class);
+        $formMapper->add('text', CKEditorType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

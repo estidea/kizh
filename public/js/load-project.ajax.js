@@ -18,8 +18,7 @@ $(document).on('click', '#load_project', function(event){
                 $('h3#project-title').html(data.title);
                 $('span#project-name').html(data.name);
                 $('p#project-description').html(data.description);
-                $('p#project-text').html(data.text);
-                $('#project-image').attr("src", 'img/'+data.image);
+                $('#project-text').html(data.text);
             }
         });
     return false;

@@ -243,6 +243,7 @@ html {
     font-weight: 300;
     line-height: normal;
     font-size: 28px;
+    max-width: 42rem;
 }
 
 #project-title {
@@ -253,14 +254,17 @@ html {
     line-height: normal;
     font-size: 42px;
     margin: 20px 0;
+    max-width: 42rem;
 }
 
 #project-description {
+    max-width: 84rem;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 14px;
+    font-size: 21px;
+    margin-bottom: 42px;
 }
 
 #portfolio-content {

@@ -46,7 +46,7 @@ Navigation
   height: 100%;
   width: -webkit-calc(100% - 4px);
   width: calc(100% - 4px);
-  background-color: #131519;
+  background-color: #fff;
 }
 .cd-side-navigation ul {
   height: 100%;
@@ -63,7 +63,7 @@ Navigation
   padding: 4em 0 1.5em;
   font-size: 1.2rem;
   text-align: center;
-  color: #4a5261;
+  color: #000000;
   -webkit-transition: background-color 0.2s, color 0.2s;
   -moz-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
@@ -93,7 +93,7 @@ Navigation
   right: -4px;
   height: 100%;
   width: 4px;
-  background-color: #fdfffc;
+  background-color: #2A31E3;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -101,39 +101,42 @@ Navigation
   pointer-events: none;
 }
 .no-touch .cd-side-navigation a:hover {
-  background-color: #08090b;
+/*  background-color: #08090b;
+  color: #fff;*/
 }
 .no-touch .cd-side-navigation a:hover::after {
   opacity: 1; 
 }
 
 .cd-side-navigation a.selected, .no-touch .cd-side-navigation a.selected:hover {
-  background-color: #ffffff;
-  color: #131519;
+  background-color: #2A31E3;
+  color: #fff;
+/*  font-size: 16px;
+  padding: 2.3em 0 2.3em; */
 }
 .cd-side-navigation a.selected > svg *, .no-touch .cd-side-navigation a.selected:hover > svg * {
-  stroke: #fdfffc;
+  stroke: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(2) .selected > svg *,
 .cd-side-navigation li:nth-of-type(2) .selected:hover > svg * {
-  stroke: #02010A;
+  stroke: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(3) .selected > svg *,
 .cd-side-navigation li:nth-of-type(3) .selected:hover > svg * {
-  stroke: #f7f7f2;
+  stroke: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(4) .selected > svg *,
 .cd-side-navigation li:nth-of-type(4) .selected:hover > svg * {
-  stroke: #e4b162;
+  stroke: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(2) a::after {
-  background-color: #02010A;
+  background-color: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(3) a::after {
-  background-color: #f7f7f2;
+  background-color: #2A31E3;
 }
 .cd-side-navigation li:nth-of-type(4) a::after {
-  background-color: #e4b162;
+  background-color: #2A31E3;
 }
 @media only screen and (min-width: 480px) {
   .cd-side-navigation {
@@ -409,16 +412,16 @@ Navigation
   transform: translateZ(0);
 }
 #cd-loading-bar.index {
-  background-color: #fdfffc;
+  background-color: #2A31E3;
 }
 #cd-loading-bar.portfolio {
-  background-color: #02010A;
+  background-color: #2A31E3;
 }
 #cd-loading-bar.contacts {
-  background-color: #f7f7f2;
+  background-color: #2A31E3;
 }
 #cd-loading-bar.contact {
-  background-color: #e4b162;
+  background-color: #2A31E3;
 }
 #cd-loading-bar.loading {
   visibility: visible;

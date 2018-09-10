@@ -1,18 +1,13 @@
+p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+}
+
 .cd-side-navigation a{
 	padding: 3em 0 2.93em;
-}
-
-.cd-side-navigation::before {
-    background-color: #02010A;
-}
-
-.cd-side-navigation a {
-    color: #bfbfbf;
-}
-
-.no-touch .cd-side-navigation a:hover {
-    background-color: #000000;
-    color: beige;
 }
 
 #logo {
@@ -66,6 +61,24 @@
 .prt-6 div {
     width:100%;
     height:100%;
+}
+
+.img-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.img-6 {
+    width: 49% !important;
+    height: auto !important;
+}
+
+.img-12 {
+    width:100% !important;
+    height:auto !important;
 }
 
 .cd-content {
@@ -204,7 +217,7 @@ html {
     opacity: 0;
     padding: 10rem;
 
-    width:100%;
+    width: calc(100% - 90px);
     height: 100%;
     background-color: white;
     z-index:-1;
@@ -229,7 +242,7 @@ html {
     position: fixed;
     width: 44px;
     height: 44px;
-    right: 18rem;
+    right: 8rem;
     top: 10rem;
     background: url('../img/Close.svg') no-repeat;
     background-size: cover;

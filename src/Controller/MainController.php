@@ -84,4 +84,13 @@ class MainController extends Controller
             'controller_name' => 'MainController',
         ]);
     }
+
+    /**
+     * @Route("/mail", name="mail")
+     */
+    public function mail(Request $request)
+    {        
+        // redirects to the "main" route
+        return $this->redirectToRoute('main');
+    }
 }

@@ -11,7 +11,7 @@
 
 			<li>
 				<a href="#0" class="menu-item" data-menu="portfolio"> 
-					Работы 
+					Кейсы 
 				</a>
 			</li>
 
@@ -25,35 +25,51 @@
 	
 	<main class="cd-main">
 		<section class="cd-section projects visible">
-			<header id="contact-form">
-				<div class="form-title">
-					<h3>Форма обратной связи</h3>
+			<div class="flex-container">
+				<div id="contact-info">
+					<div class="contact-info-center">
+						<h3>Контакты</h3>
+						<span>Телефон/Telegram</span>
+						<p>+38(093)8503754</p>
+						<span>Электронный адрес</span>
+						<p>Kizh.studio@gmail.com</p>
+					</div>
 				</div>
-				<form id="contactForm" name="sentMessage" autocomplete="off">
-					<p class="formTitle"></p>
-					<p class="msgs"></p>
+				<div id="contact-form">
+					<div class="contact-form-center">
+						<h3>Форма</h3>
+						<form id="contactForm" name="sentMessage" autocomplete="off">
+							<p class="formTitle"></p>
+							<p class="msgs"></p>
+							<div class="form-div">
+								<label for="username" class="form-label">Ваше имя</label>
+								<input class="form-input" id="username" name="uname" type="text" tabindex="0" required data-validation-required-message="Пожалуйста, введите ваше имя">
+							</div>
+							<div class="form-div">
+								<label for="connect-method" class="form-label">Электронный адрес</label>
+								<input class="form-input" id="connect-method" name="connect-method" type="text" required data-validation-required-message="Please enter your email address.">
+							</div>
+							<div class="form-div">
+								<label for="message" class="form-label">Несколько слов о вашем проекте</label>
+								<textarea class="form-textarea" id="message" name="message" required data-validation-required-message="Please enter a message." data="elastic"></textarea>
+							</div>
 
-						<label for="username" class="form-label">Имя</label>
-						<input class="form-input" id="username" name="uname" type="text" tabindex="0" required data-validation-required-message="Пожалуйста, введите ваше имя">
-
-
-						<label for="connect-method" class="form-label">Email или телефон (Telegram)</label>
-						<input class="form-input" id="connect-method" name="connect-method" type="text" required data-validation-required-message="Please enter your email address.">
-
-						<label for="message" class="form-label">Несколько слов о вашем проекте</label>
-						<textarea class="form-textarea" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
-
-					<input name="formInfo" class="formInfo" type="hidden" value="" title="baaaaa"/>
-					<input type="submit" id="sendMessageButton" name="send" class="btn-black" value="Отправить" />
-		    	</form>
-			</header>
+							<input name="formInfo" class="formInfo" type="hidden" value="" title="baaaaa"/>
+							<input type="submit" id="sendMessageButton" name="send" class="btn-black" value="Отправить" />
+				    	</form>
+		    		</div>
+		    	</div>
+		    	<div id="contact-animation">
+		    		<div id="letter-animation">
+		    			<p>Animation will be here</p>
+		    		</div>
+		    		<div id="contact-logo">
+						<img onload="initForm()" src="{{ asset('img/logo.png') }}" id="contact-minilogo">
+		    		</div>
+		    	</div>
+			</div>
 		</section> <!-- .cd-section -->
 	</main> <!-- .cd-main -->
 
 	<div id="cd-loading-bar" data-scale="1" class="projects"></div> <!-- lateral loading bar -->
-{% endblock %}
-
-{% block javascripts %}
-	{{ parent() }}
-	<script src="{{ asset('js/form.js') }}"></script>
 {% endblock %}

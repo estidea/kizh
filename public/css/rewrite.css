@@ -12,18 +12,18 @@ p {
 
 #logo {
 	position: absolute;
-	max-width: 461px;
-	right:10vw;
-	bottom:10vh;
-	width: 40vw;
+    width: 78.5%;
+    top: 39.6rem;
+    left: calc(11.25rem - 0.47%);
 }
 
 .cd-title {
     top: 0;
-    margin-top: 24vh;
     width: 70%;
-    margin-left: 10%;
     max-width: 800px;
+    margin-top: 13.4rem;
+    margin-left: 11.2rem;
+    padding: 0;
 }
 
 .cd-title h2 {
@@ -37,25 +37,14 @@ p {
 
 .row {
 	width:100%;
-	height:580px;
-}
-
-.prt-7 {
-	width:58%;
-	height:100%;
-	float:left;
-}
-
-.prt-5 {
-	width:42%;
-	float:left;
-	height:100%;
+	height:35vw;
 }
 
 .prt-6 {
+    background-color: #fff;
     width:50%;
     float:left;
-    height:580px;
+    height:35vw;
 }
 
 .prt-6 div {
@@ -69,6 +58,17 @@ p {
     align-items: center;
     overflow: auto;
     justify-content: space-between;
+    margin-bottom: 4.2rem;
+}
+
+.img-row p {
+    width: 90%;
+    font-size: 21px;
+}
+
+.img-4 {
+    width: 32% !important;
+    height: auto !important;
 }
 
 .img-6 {
@@ -76,8 +76,23 @@ p {
     height: auto !important;
 }
 
+.img-8 {
+    width: 65% !important;
+    height: auto !important;
+}
+
 .img-12 {
     width:100% !important;
+    height:auto !important;
+}
+
+.img-37 {
+    width:37% !important;
+    height:auto !important;
+}
+
+.img-63 {
+    width:63% !important;
     height:auto !important;
 }
 
@@ -88,77 +103,95 @@ p {
 
 /* CONTACT FORM */
 #contact-form {
-	flex-direction: column;
-    align-items: center;	
-    padding:10rem;
+    background-color: #02010A;
 }
 
-.form-title {
-	color: #000000;
-    font-size: 3rem;
+#contact-form h3 {
+    margin-bottom: 0.3rem;
 }
 
-#contactForm {
-	padding: 60px 0;
+.form-div {
+    padding: 1.4rem 0 0 0;
+    position: relative;
+}
+
+.form-div:after, .form-div:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #FDFFFC; 
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.form-div::after {
+  background-color: #2A31E3;
+  transform: scaleX(0);
+}
+
+.is-active::after {
+  transform: scaleX(1);
+}
+
+.is-active .form-label {
+  color: #fff;
+}
+
+.is-completed .form-label {
+  font-size: 14px;
+  transform: translateY(0);
 }
 
 .form-input {
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    width: 670px;
-    height: 60px;
-    margin-bottom: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    background-color: #f7f7f2;
-    font-size: 30px;
-    padding: 15px 20px;
-      font-family: "PT Sans", sans-serif;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 16px;
+    color: #fff;
 }
 
-.form-label {
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    font-size: 2.2rem;
-    text-align: center;
-    padding: 15px 0;
-    color: #000000;
-    display: table;
+.form-label { /* mat-label */
+    display: block;
+    font-size: 14px;
+    transform: translateY(25px);
+    color: #999996;
+    transition: all 0.5s;
 }
 
 .form-textarea {
- 	border: 1px solid #000000;
-  box-sizing: border-box;
-  width: 670px;
-  background-color: #f7f7f2;;
-  height: 90px;
-	  font-family: "PT Sans", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 30px;
-	padding: 10px 20px;
-  margin-bottom: 40px;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #fff;
+    resize: vertical;
+    height: 4rem;
 }
 
 .btn-black {
-
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 2rem;
-	text-align: center;
-	display: block;
-	color: #FFFFFF;
-
-	max-width: 300px;
-    width: 100%;
-	height: 60px;
-	background: #02010A;
-	cursor: pointer;
-  	border: 2px solid #02010A;
+    font-style: normal;
+    margin-top: 4.2rem;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 1.4rem;
+    text-align: center;
+    display: block;
+    color: #FFFFFF;
+    /* max-width: 300px; */
+    min-width: 19rem;
+    height: 4.9rem;
+    background: #02010A;
+    cursor: pointer;
+    border: 1px solid #fff;
 }
 
 /*  ANTI SCROLL*/
@@ -174,48 +207,44 @@ html {
 .hover-overlay {
     position: relative;
     transition: 0.3s;
-    opacity:0;
     width:100%;
-    height:580px;
-    top:-580px;
-    background-color:rgba(0, 0, 0, 0.61);
+    height:35vw;
+    top:-35vw;
+    /*background-color:rgba(0, 0, 0, 0.61);*/
 }
 
-.hover-overlay:hover {
+/*.hover-overlay:hover {
     opacity:1;
     transition: 0.3s;
-}
+}*/
 
 .hover-overlay span{
     position: relative;
-    left: 90px;
-    top: 90px;
+    left: 5.4rem;
+    top: 6rem;
+    font-size: 2.1rem;
     max-width: 70%;
     font-family: Open Sans;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 28px;
-    color: #FFFFFF;
 }
 
 .hover-overlay h3 {
     position: relative;
-    left: 90px;
-    top: 111px;
+    left: 5.4rem;
+    top: 7.4rem;
+    font-size: 2.8rem;
     max-width: 70%;
     font-family: PT Sans;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 42px;
-
-    color: #FFFFFF;
 }
 
 #project-detail{
     opacity: 0;
-    padding: 10rem;
+    padding: 10.2rem 8.2rem;
 
     width: calc(100% - 90px);
     height: 100%;
@@ -247,6 +276,7 @@ html {
     background: url('../img/Close.svg') no-repeat;
     background-size: cover;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 #project-name {
@@ -266,8 +296,8 @@ html {
     font-weight: bold;
     line-height: normal;
     font-size: 42px;
-    margin: 20px 0;
-    max-width: 42rem;
+    margin: 21px 0;
+    max-width: 66.6%;
 }
 
 #project-description {
@@ -292,4 +322,510 @@ html {
 .half-side-project {
     width:50%;
     float: left;
+}
+
+/* CONTACTS */
+.flex-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #fdfffc;
+  overflow: hidden;
+  display:flex;
+  justify-content: space-between;
+}
+
+#contact-info, #contact-form, #contact-animation {
+    width:33.3%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info-center, .contact-form-center {
+    width: 70%;
+    margin-top: 14rem;
+    overflow: auto;
+}
+
+.contact-info-center {
+    color: #000;
+}
+
+.contact-form-center {
+    color: #fff;
+}
+
+h3 {
+    font-family: PT Sans;
+    font-size: 4.2rem;
+    margin-bottom: 4.1rem;
+}
+
+.contact-info-center span {
+    font-size: 1.2rem;
+    color: rgba(2, 1, 10, 0.7);
+    padding-left: .7rem;
+}
+
+.contact-info-center p {
+    font-size: 2.1rem;
+    color: #000000;
+    margin-bottom: 1.7rem;
+}
+
+#contact-animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14rem 0 12.8rem;
+    align-items:center;
+}
+
+#letter-animation {
+    color:black;
+}
+
+#contact-logo {
+    width:70%;
+    position: relative;
+}
+
+#contact-minilogo {
+    width: 100%;
+    display: block;
+    top: 0;
+    position: absolute;
+}
+
+/* XXS responsive */
+/* XXS 1 screen */
+@media (max-width: 419px) {
+    #logo {
+        position: relative;
+        width: 84%;
+        display: block;
+        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .cd-side-navigation {
+        width: 60px;
+    }
+
+    .cd-side-navigation a {
+        padding: 1.85em 0 1.80em;
+    }
+
+    .cd-title {
+        position: relative;
+        width: 100%;
+        padding: 1.8rem 2.1rem;
+        margin-top: 0; 
+        margin-left: 0; 
+    }
+
+    .cd-title h2 {
+        line-height: initial;
+    }
+
+    .cd-section {
+        padding-left: 56px;
+    }
+
+/* XXS 2 screen */
+    .prt-6 {
+        width: 100%;
+        float: left;
+        height: 69vw;
+    }
+
+    .hover-overlay {
+        position: relative;
+        transition: 0.3s;
+        width: 100%;
+        height: 35vw;
+        top: -69vw;
+    }
+
+    .hover-overlay span {
+        left: 2.7rem;
+        top: 3rem;
+        font-size: 1.4rem;
+    }
+    
+    .hover-overlay h3 {
+        left: 2.7rem;
+        top: 4.1rem;
+        font-size: 2.1rem;
+    }
+
+    /* Project detail */
+
+    #project-close {
+        width: 28px;
+        height: 28px;
+        right: 4.2rem;
+        top: 7rem;
+    }
+
+    #project-name {
+        font-size: 21px;
+        max-width: 42rem;
+    }
+
+    #project-title {
+        font-size: 28px;
+        margin: 13px 0;
+    }
+
+    #project-description {
+        font-size: 2.8rem;
+        margin-bottom: 2.8rem;
+    }
+
+    #project-detail {
+        width: calc(100% - 56px);
+        left: 56px;
+        padding: 6.3rem 4.1rem;
+    }
+
+    .img-row {
+        flex-direction: column;
+        margin-bottom: 4.2rem;
+    }
+
+    .img-37, .img-63, .img-6 {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .img-6 {
+        margin-bottom: 1.4rem;
+    }
+
+    .img-row p {
+        width: 90%;
+        margin-bottom: 1.5rem;
+    }
+
+/* XXS 3 screen */
+    .flex-container {
+        overflow: auto; 
+        flex-wrap: wrap;
+    }
+
+    .contact-info-center, .contact-form-center {
+        margin-bottom: 14rem;
+    }
+
+    #letter-animation {
+        display: none;
+    }
+
+    #contact-info, #contact-form {
+        width: 100%;
+    }
+
+    #contact-animation {
+        width: 1px;
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+    }   
+
+    .btn-black {
+        width: 100%;
+    }
+}
+
+/* XS responsive */
+/* XS 1 screen */
+@media (min-width: 420px) and (max-width: 767px) {
+    #logo {
+        position: relative;
+        width: 84%;
+        display: block;
+        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .cd-side-navigation {
+        width: 60px;
+    }
+
+    .cd-side-navigation a {
+        padding: 1.85em 0 1.80em;
+    }
+
+    .cd-title {
+        position: relative;
+        width: 100%;
+        padding: 1.8rem 2.1rem;
+        margin-top: 0; 
+        margin-left: 0; 
+    }
+
+    .cd-title h2 {
+        /*line-height: 1.33;*/
+        line-height: initial;
+    }
+
+    .cd-section {
+        padding-left: 56px;
+    }
+
+/* XS 2 screen */
+    .prt-6 {
+        width: 100%;
+        float: left;
+        height: 69vw;
+    }
+
+    .hover-overlay {
+        position: relative;
+        transition: 0.3s;
+        width: 100%;
+        height: 35vw;
+        top: -69vw;
+    }
+
+    .hover-overlay span {
+        left: 5.4rem;
+        top: 6rem;
+        font-size: 2.1rem;
+    }
+    
+    .hover-overlay h3 {
+        left: 5.4rem;
+        top: 7.4rem;
+        font-size: 2.8rem;
+    }
+    
+    #project-close {
+        width: 28px;
+        height: 28px;
+        right: 4.2rem;
+        top: 7rem;
+    }
+
+    #project-name {
+        font-size: 21px;
+        max-width: 42rem;
+    }
+
+    #project-title {
+        font-size: 28px;
+        margin: 13px 0;
+    }
+
+    #project-description {
+        font-size: 2.1rem;
+        margin-bottom: 2.8rem;
+    }
+
+    #project-detail {
+        width: calc(100% - 56px);
+        left: 56px;
+        padding: 6.3rem 4.1rem;
+    }
+
+    .img-row {
+        flex-direction: column;
+        margin-bottom: 4.2rem;
+    }
+
+    .img-37, .img-63, .img-6 {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .img-6 {
+        margin-bottom: 1.4rem;
+    }
+
+    .img-row p {
+        width: 90%;
+        margin-bottom: 1.5rem;
+    }
+/* XS 3 screen */
+
+    .flex-container {
+        overflow: auto; 
+        flex-wrap: wrap;
+    }
+
+    .contact-info-center, .contact-form-center {
+        margin-bottom: 14rem;
+    }
+
+    #letter-animation {
+        display: none;
+    }
+
+    #contact-info, #contact-form {
+        width: 100%;
+    }
+
+    #contact-animation {
+        width: 1px;
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+    }   
+}
+
+/* SM responsive */
+/* SM 1 screen */
+@media (min-width: 768px) and (max-width: 991px) {
+    #logo {
+        position: relative;
+        width: 84%;
+        display: block;
+        margin: 10.8rem 4.2rem 4.2rem 3.9rem;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+/*
+    .cd-side-navigation {
+    }
+
+    .cd-side-navigation a {
+    }
+*/
+    .cd-title {
+        position: relative;
+        width: 100%;
+        padding: 4.3rem 4.2rem;
+        margin-top: 0; 
+        margin-left: 0; 
+    }
+
+    .cd-title h2 {
+        /*line-height: 1.33;*/
+        line-height: initial;
+    }
+
+
+/*    .cd-section {
+        padding-left: 56px;
+    }
+*/
+/* SM 2 screen */
+    .prt-6 {
+        width: 100%;
+        float: left;
+        height: 69vw;
+    }
+
+    .hover-overlay {
+        position: relative;
+        transition: 0.3s;
+        width: 100%;
+        height: 35vw;
+        top: -69vw;
+    }
+
+    .hover-overlay span{
+        left: 11rem;
+        top: 13rem;
+        font-size: 2.8rem;
+    }
+
+    .hover-overlay h3 {
+        left: 11rem;
+        top: 15.1rem;
+        font-size: 3.5rem;
+    }
+
+/* SM 3 screen */
+    #letter-animation {
+        display: none;
+    }
+
+    #contact-info, #contact-form {
+        width: 50%;
+    }
+
+    #contact-animation {
+        width: 1px;
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+}
+
+/* MD responsive */
+@media (min-width: 992px) and (max-width: 1199px) {
+/* MD 1 screen */
+/* MD 2 screen */
+    .hover-overlay span {
+        left: 5.64rem;
+        top: 6.3rem;
+        font-size: 2.1rem;
+    }
+    
+    .hover-overlay h3 {
+        left: 5.6rem;
+        top: 7.4rem;
+        font-size: 2.8rem;
+    }
+
+
+/* MD 3 screen */
+
+    
+}
+
+/* LG responsive */
+@media (min-width: 1200px) and (max-width: 1499px) {
+/* LG 1 screen */
+/* LG 2 screen */
+    .hover-overlay span{
+        left: 5.6rem;
+        top: 6rem;
+        font-size: 2.8rem;
+    }
+
+    .hover-overlay h3 {
+        left: 5.6rem;
+        top: 7.4rem;
+        font-size: 3.5rem;
+    }
+
+/* LG 3 screen */
+
+    
+}
+    
+
+
+/* XXL responsive */
+@media (min-width: 1500px) {
+/* XXL 1 screen */
+/* XXL 2 screen */
+    .hover-overlay span{
+        left: 8.2rem;
+        top: 10.2rem;
+        font-size: 2.8rem;
+    }
+
+    .hover-overlay h3 {
+        left: 8.2rem;
+        top: 12.3rem;
+        font-size: 4.2rem;
+    }
+
+
+/* XXL 3 screen */
+
+    
 }

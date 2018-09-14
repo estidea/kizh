@@ -15,6 +15,7 @@ class ProjectsAdmin extends AbstractAdmin
     {
         $formMapper->add('title', TextType::class);
         $formMapper->add('description', TextType::class);
+        $formMapper->add('maincolor', TextType::class);
         $formMapper->add('name', TextType::class);
         $formMapper->add('image_url', TextType::class);
         $formMapper->add('text', CKEditorType::class);
@@ -24,6 +25,7 @@ class ProjectsAdmin extends AbstractAdmin
     {
         $datagridMapper->add('title');
         $datagridMapper->add('description');
+        $datagridMapper->add('maincolor');
         $datagridMapper->add('name');
         $datagridMapper->add('image_url');
         $datagridMapper->add('text');
@@ -33,6 +35,7 @@ class ProjectsAdmin extends AbstractAdmin
     {
         $listMapper->addIdentifier('title');
         $listMapper->addIdentifier('description');
+        $listMapper->addIdentifier('maincolor');
         $listMapper->addIdentifier('name');
         $listMapper->addIdentifier('image_url');
         $listMapper->addIdentifier('text');

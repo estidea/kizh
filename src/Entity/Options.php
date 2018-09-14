@@ -26,6 +26,11 @@ class Options
      */
     private $value;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $maincolor;
+
     public function getId() //: ?int
     {
         return $this->id;
@@ -51,6 +56,18 @@ class Options
     public function setValue(string $value) //: self
     {
         $this->value = $value;
+
+        return $this;
+    }
+
+    public function getMaincolor(): ?string
+    {
+        return $this->maincolor;
+    }
+
+    public function setMaincolor(?string $maincolor): self
+    {
+        $this->maincolor = $maincolor;
 
         return $this;
     }

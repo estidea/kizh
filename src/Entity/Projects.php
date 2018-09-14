@@ -41,6 +41,11 @@ class Projects
      */
     private $text;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $maincolor;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +107,18 @@ class Projects
     public function setText(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getMaincolor(): ?string
+    {
+        return $this->maincolor;
+    }
+
+    public function setMaincolor(?string $maincolor): self
+    {
+        $this->maincolor = $maincolor;
 
         return $this;
     }

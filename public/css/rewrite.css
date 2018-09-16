@@ -1,9 +1,14 @@
+input[type=submit], input[type=text], textarea {
+    /* for iOs*/
+  -webkit-appearance: none;
+}
+
 p {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .cd-side-navigation a{
@@ -13,14 +18,20 @@ p {
 #logo {
 	position: absolute;
     width: 78.5%;
-    top: 39.6rem;
+    /*top: 39.6rem;*/
     left: calc(11.25rem - 0.47%);
+    bottom: 5.6rem;
+    top: auto;
+}
+
+.index {
+    overflow: hidden;
 }
 
 .cd-title {
     top: 0;
     width: 70%;
-    max-width: 800px;
+    max-width: 80rem;
     margin-top: 13.4rem;
     margin-left: 11.2rem;
     padding: 0;
@@ -63,7 +74,7 @@ p {
 
 .img-row p {
     width: 90%;
-    font-size: 21px;
+    font-size: 2.1rem;
 }
 
 .img-4 {
@@ -120,7 +131,7 @@ p {
   position: absolute;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 0.2rem;
   background-color: #FDFFFC; 
   bottom: 0;
   left: 0;
@@ -141,7 +152,7 @@ p {
 }
 
 .is-completed .form-label {
-  font-size: 14px;
+  font-size: 1.4rem;
   transform: translateY(0);
 }
 
@@ -151,15 +162,15 @@ p {
     width: 100%;
     border: none;
     outline: none;
-    padding: 11px 0;
-    font-size: 16px;
+    padding: 1.1rem 0;
+    font-size: 1.6rem;
     color: #fff;
 }
 
 .form-label { /* mat-label */
     display: block;
-    font-size: 14px;
-    transform: translateY(25px);
+    font-size: 1.4rem;
+    transform: translateY(2.5rem);
     color: #999996;
     transition: all 0.5s;
 }
@@ -170,8 +181,8 @@ p {
     width: 100%;
     border: none;
     outline: none;
-    padding: 8px 0;
-    font-size: 16px;
+    padding: 0.8rem 0;
+    font-size: 1.6rem;
     color: #fff;
     resize: vertical;
     height: 4rem;
@@ -186,7 +197,6 @@ p {
     text-align: center;
     display: block;
     color: #FFFFFF;
-    /* max-width: 300px; */
     min-width: 19rem;
     height: 4.9rem;
     background: #02010A;
@@ -194,13 +204,31 @@ p {
     border: 1px solid #fff;
 }
 
+.msgs {
+    display: none;
+    position: absolute;
+    width: 30vw;
+    height: 20vh;
+    top: 50%;
+    background-color: #ffffffd1;
+    color: black;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    font-size: 2.1rem;
+    align-items: center;
+}
+
+
+
 /*  ANTI SCROLL*/
 html {
     overflow: scroll;
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
+    width: 0rem;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
@@ -246,7 +274,7 @@ html {
     opacity: 0;
     padding: 10.2rem 8.2rem;
 
-    width: calc(100% - 90px);
+    width: calc(100% - 9rem);
     height: 100%;
     background-color: white;
     z-index:-1;
@@ -254,11 +282,13 @@ html {
     position: fixed; 
     overflow-y: scroll;
     top: 0; 
-    left: 90px;
+    left: 9rem;
     right: 0;
     bottom: 0;
     color:black;
     transition: 0.5s;
+    /* for iOs*/
+    -webkit-overflow-scrolling:touch;
 }
 
 #project-detail-content {
@@ -269,8 +299,8 @@ html {
 
 #project-close {
     position: fixed;
-    width: 44px;
-    height: 44px;
+    width: 4.4rem;
+    height: 4.4rem;
     right: 8rem;
     top: 10rem;
     background: url('../img/Close.svg') no-repeat;
@@ -285,7 +315,7 @@ html {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 28px;
+    font-size: 2.8rem;
     max-width: 42rem;
 }
 
@@ -295,8 +325,8 @@ html {
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 42px;
-    margin: 21px 0;
+    font-size: 4.2rem;
+    margin: 2.1rem 0;
     max-width: 66.6%;
 }
 
@@ -306,8 +336,8 @@ html {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 21px;
-    margin-bottom: 42px;
+    font-size: 2.1rem;
+    margin-bottom: 4.2rem;
 }
 
 #portfolio-content {
@@ -400,18 +430,26 @@ h3 {
 /* XXS responsive */
 /* XXS 1 screen */
 @media (max-width: 419px) {
+    #cd-loading-bar {
+        left: 5.6rem;
+    }
+
     #logo {
-        position: relative;
+        /*position: relative;*/
         width: 84%;
         display: block;
-        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
+/*        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
         position: relative;
         top: 0;
-        left: 0;
+        left: 0;*/
+        position: absolute;
+        bottom: 2.8rem;
+        top: auto;
+        left: 1.8rem;
     }
 
     .cd-side-navigation {
-        width: 60px;
+        width: 6rem;
     }
 
     .cd-side-navigation a {
@@ -431,7 +469,7 @@ h3 {
     }
 
     .cd-section {
-        padding-left: 56px;
+        padding-left: 5.6rem;
     }
 
 /* XXS 2 screen */
@@ -464,20 +502,20 @@ h3 {
     /* Project detail */
 
     #project-close {
-        width: 28px;
-        height: 28px;
+        width: 2.8rem;
+        height: 2.8rem;
         right: 4.2rem;
         top: 7rem;
     }
 
     #project-name {
-        font-size: 21px;
+        font-size: 2.1rem;
         max-width: 42rem;
     }
 
     #project-title {
-        font-size: 28px;
-        margin: 13px 0;
+        font-size: 2.8rem;
+        margin: 1.3rem 0;
     }
 
     #project-description {
@@ -486,8 +524,8 @@ h3 {
     }
 
     #project-detail {
-        width: calc(100% - 56px);
-        left: 56px;
+        width: calc(100% - 5.6rem);
+        left: 5.6rem;
         padding: 6.3rem 4.1rem;
     }
 
@@ -517,7 +555,18 @@ h3 {
     }
 
     .contact-info-center, .contact-form-center {
-        margin-bottom: 14rem;
+        width: 90%;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        margin-bottom: 3.4rem;
+    }
+
+    .contact-info-center p {
+        word-wrap: break-word;
     }
 
     #letter-animation {
@@ -529,9 +578,9 @@ h3 {
     }
 
     #contact-animation {
-        width: 1px;
+        width: .01rem;
         position: absolute;
-        height: 1px;
+        height: .01rem;
         overflow: hidden;
         opacity: 0;
     }   
@@ -545,17 +594,20 @@ h3 {
 /* XS 1 screen */
 @media (min-width: 420px) and (max-width: 767px) {
     #logo {
-        position: relative;
         width: 84%;
         display: block;
-        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
+/*        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
         position: relative;
         top: 0;
-        left: 0;
+        left: 0;*/
+        position: absolute;
+        bottom: 2.8rem;
+        top: auto;
+        left: 1.8rem;
     }
 
     .cd-side-navigation {
-        width: 60px;
+        width: 6rem;
     }
 
     .cd-side-navigation a {
@@ -575,8 +627,12 @@ h3 {
         line-height: initial;
     }
 
+    #cd-loading-bar {
+        left: 5.6rem;
+    }
+
     .cd-section {
-        padding-left: 56px;
+        padding-left: 5.6rem;
     }
 
 /* XS 2 screen */
@@ -607,20 +663,20 @@ h3 {
     }
     
     #project-close {
-        width: 28px;
-        height: 28px;
+        width: 2.8rem;
+        height: 2.8rem;
         right: 4.2rem;
         top: 7rem;
     }
 
     #project-name {
-        font-size: 21px;
+        font-size: 2.1rem;
         max-width: 42rem;
     }
 
     #project-title {
-        font-size: 28px;
-        margin: 13px 0;
+        font-size: 2.8rem;
+        margin: 1.3rem 0;
     }
 
     #project-description {
@@ -629,8 +685,8 @@ h3 {
     }
 
     #project-detail {
-        width: calc(100% - 56px);
-        left: 56px;
+        width: calc(100% - 5.6rem);
+        left: 5.6rem;
         padding: 6.3rem 4.1rem;
     }
 
@@ -672,9 +728,9 @@ h3 {
     }
 
     #contact-animation {
-        width: 1px;
+        width: .01rem;
         position: absolute;
-        height: 1px;
+        height: .01rem;
         overflow: hidden;
         opacity: 0;
     }   
@@ -684,13 +740,17 @@ h3 {
 /* SM 1 screen */
 @media (min-width: 768px) and (max-width: 991px) {
     #logo {
-        position: relative;
         width: 84%;
         display: block;
-        margin: 10.8rem 4.2rem 4.2rem 3.9rem;
+/*        margin: 10.8rem 4.2rem 4.2rem 3.9rem;
         position: relative;
         top: 0;
-        left: 0;
+        left: 0;*/
+        position: absolute;
+        bottom: 4.2rem;
+        top: auto;
+        left: 3.9rem;
+
     }
 /*
     .cd-side-navigation {
@@ -712,11 +772,6 @@ h3 {
         line-height: initial;
     }
 
-
-/*    .cd-section {
-        padding-left: 56px;
-    }
-*/
 /* SM 2 screen */
     .prt-6 {
         width: 100%;
@@ -754,9 +809,9 @@ h3 {
     }
 
     #contact-animation {
-        width: 1px;
+        width: .01rem;
         position: absolute;
-        height: 1px;
+        height: .01rem;
         overflow: hidden;
         opacity: 0;
     }

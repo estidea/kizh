@@ -88,9 +88,53 @@ class MainController extends Controller
     /**
      * @Route("/mail", name="mail")
      */
-    public function mail(Request $request)
-    {        
-        // redirects to the "main" route
-        return $this->redirectToRoute('main');
+    public function mail(Request $request, \Swift_Mailer $mailer)
+    {   
+        if($request->request->get('uname')){
+            echo 'first';
+            $uname = $request->request->get('uname');
+            $connect_method = $request->request->get('connect-method');
+            $form_message = $request->request->get('message');
+            $form_info = $request->request->get('formInfo');
+            echo 'second'.$connect_method;
+            $message = (new \Swift_Message('New client'))
+                ->setSubject($form_info)
+                ->setFrom('vlastelin@kizh.studio')
+                ->setTo('nick.whatsoever@gmail.com')
+                ->setBody('Name = '.$uname.', message = '.$form_message.', email = '.$connect_method);
+
+            $mailer->send($message);
+            return $this->redirectToRoute('contacts');
+        }
+        else return $this->redirectToRoute('contacts');
     }
+
+          
+
+    //         $to = "nick.whatsoever@gmail.com"; Укажите адрес, на который должно приходить письмо
+    //         $sendfrom = "vlastelin@kizh.tk"; /*Укажите адрес, с которого будет приходить письмо */
+    //         $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
+    //         $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
+    //         $headers .= "MIME-Version: 1.0\r\n";
+    //         $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+    //         $headers .= "Content-Transfer-Encoding: 8bit \r\n";
+    //         $subject = "$formInfo";
+    //         $message = "$unameFieldset $uname
+    //                     $connect_methodFieldset $connect_method
+    //                     $messageFieldset $message
+    //                     $formInfoFieldset $formInfo";
+
+    //         $send = mail ($to, $subject, $message, $headers);
+    //             if ($send == 'true') {
+    //                 echo '<p class="success">Спасибо за отправку вашего сообщения!</p>';
+    //             } else {
+    //               echo '<p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p>';
+    //             }
+    //       } else {
+    //         echo '<p class="fail">Ошибка. Вы заполнили не все обязательные поля!</p>';
+    //       }
+    //     } else {
+    //       header ("Location: http://kizh.tk"); // главная страница вашего лендинга
+    //     }
+    // }
 }

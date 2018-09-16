@@ -33,15 +33,16 @@ $(document).ready(function () {
         // Добавление решётки к имени ID
         var formNm = $('#' + formID);
         var message = $(formNm).find(".msgs"); // Ищес класс .msgs в текущей форме  и записываем в переменную
-        var formTitle = $(formNm).find(".formTitle"); // Ищес класс .formtitle в текущей форме и записываем в переменную
+        // var formTitle = $(formNm).find(".formTitle"); // Ищес класс .formtitle в текущей форме и записываем в переменную
         $.ajax({
             type: "POST",
             url: '/mail',
             data: formNm.serialize(),
             success: function (data) {
               // Вывод сообщения об успешной отправке
-              message.html(data);
-              formTitle.css("display","none");
+              message.css('display','flex');
+              message.html('Письмо успешно отправлено!');
+              // formTitle.css("display","none");
               setTimeout(function(){
                 //$(formNm).css("display","block");
                 $('.formTitle').css("display","block");
@@ -50,16 +51,21 @@ $(document).ready(function () {
                 
                 setTimeout(function(){
                   $('.msgs').html('');
+                  $('.msgs').css('display','none');
                 },1000);
 
                 $('textarea').val('');
                 $('input').not(':input[type=submit], :input[type=hidden]').val('');
+                $(".form-input").parent().removeClass("is-completed");
+                $(".form-input").parent().removeClass("is-active");
+                $(".form-textarea").parent().removeClass("is-completed");
+                $(".form-textarea").parent().removeClass("is-active");
               }, 3000);
             },
             error: function (jqXHR, text, error) {
                 // Вывод сообщения об ошибке отправки
                 message.html(error);
-                formTitle.css("display","none");
+                // formTitle.css("display","none");
                 // $(formNm).css("display","none");
                 setTimeout(function(){
                   //$(formNm).css("display","block");
@@ -68,7 +74,7 @@ $(document).ready(function () {
                   setTimeout(function(){
                     $('.msgs').html('');
                   },1000);
-                  $('.formTitle').css("display","block");
+                  // $('.formTitle').css("display","block");
                   $('input').not(':input[type=submit], :input[type=hidden]').val('');
                 }, 3000);
             }

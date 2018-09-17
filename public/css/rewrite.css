@@ -24,6 +24,11 @@ p {
     top: auto;
 }
 
+.cd-section {
+    /* for iOs*/
+    -webkit-overflow-scrolling:auto;
+}
+
 .index {
     overflow: hidden;
 }
@@ -238,13 +243,12 @@ html {
     width:100%;
     height:35vw;
     top:-35vw;
-    /*background-color:rgba(0, 0, 0, 0.61);*/
 }
 
-/*.hover-overlay:hover {
-    opacity:1;
+.hover-overlay:hover {
     transition: 0.3s;
-}*/
+    background-color:rgba(0, 0, 0, 0.14);
+}
 
 .hover-overlay span{
     position: relative;
@@ -288,7 +292,7 @@ html {
     color:black;
     transition: 0.5s;
     /* for iOs*/
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:auto;
 }
 
 #project-detail-content {
@@ -307,6 +311,13 @@ html {
     background-size: cover;
     cursor: pointer;
     opacity: 0.5;
+}
+
+#close-project-touch {
+    width: 200%;
+    height: 200%;
+    margin-top: -50%;
+    margin-left: -50%;
 }
 
 #project-name {

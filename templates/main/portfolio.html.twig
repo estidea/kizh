@@ -31,12 +31,12 @@
 			        	<div 
 			        	style="{{
 			        		"background:url('../img/#{project.imageUrl}') no-repeat; 
-			        		background-size: cover;
+			        		background-size: 110%;
 
 			        		" 
 			        	}}">
 			        	</div>
-			        	<div id="" class="hover-overlay" style="color:{{project.maincolor}}">
+			        	<div class="hover-overlay" style="color:{{project.maincolor}}">
 			        		<span>{{project.name}}</span>
 			        		<h3>{{project.title}}</h3>
 			        	</div>
@@ -46,7 +46,9 @@
 			</div> <!-- .cd-content -->
 			<div id="project-detail">
 	            <div class="project-detail-content">
-	                <div id="project-close"></div>
+	                <div id="project-close">
+	                	<div id="close-project-touch"></div>
+	                </div>
 	                <span id="project-name"></span>
 	                <h3 id="project-title"></h3>
 	                <p id="project-description"></p>

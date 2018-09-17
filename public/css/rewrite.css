@@ -229,9 +229,10 @@ p {
 
 /*  ANTI SCROLL*/
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+/*    overflow: scroll;
+    overflow-x: hidden;*/
 }
+
 ::-webkit-scrollbar {
     width: 0rem;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -431,11 +432,27 @@ h3 {
     position: relative;
 }
 
-#contact-minilogo {
+/*#contact-minilogo {
     width: 100%;
     display: block;
     top: 0;
     position: absolute;
+}*/
+
+#contact-animation {
+    z-index: 0;
+}
+
+#contact-minilogo {
+    width: 100%;
+    display: block;
+    bottom: 0px;
+    left: 0;
+    position: fixed;
+    z-index: 0;
+}
+#contact-form {
+    z-index: 1;
 }
 
 /* XXS responsive */
@@ -515,8 +532,8 @@ h3 {
     #project-close {
         width: 2.8rem;
         height: 2.8rem;
-        right: 4.2rem;
-        top: 7rem;
+        right: 2.1rem;
+        top: 4.2rem;
     }
 
     #project-name {
@@ -537,12 +554,12 @@ h3 {
     #project-detail {
         width: calc(100% - 5.6rem);
         left: 5.6rem;
-        padding: 6.3rem 4.1rem;
+        padding: 4.8rem 2rem;
     }
 
     .img-row {
         flex-direction: column;
-        margin-bottom: 4.2rem;
+        margin-bottom: 2.1rem;
     }
 
     .img-37, .img-63, .img-6 {
@@ -555,8 +572,9 @@ h3 {
     }
 
     .img-row p {
-        width: 90%;
+        width: 100%;
         margin-bottom: 1.5rem;
+        font-size: 1.4rem;
     }
 
 /* XXS 3 screen */

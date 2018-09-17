@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  // setInterval(function() {
+  //   left++;
+  //   $('#contact-logo').css('left',left+'px');
+  // },500);
   /* Elastic textarea */
   var idNum = 0, data = 'elastic'; 
   $('body').on('keyup', 'textarea[data^="'+data+'"]', function(){ 

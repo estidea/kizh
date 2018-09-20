@@ -1,4 +1,5 @@
 input[type=submit], input[type=text], textarea {
+    font-family: Open Sans;
     /* for iOs*/
   -webkit-appearance: none;
 }
@@ -57,7 +58,7 @@ p {
 }
 
 .prt-6 {
-    background-color: #fff;
+    background-color: #FDFFFC;
     width:50%;
     float:left;
     height:35vw;
@@ -144,7 +145,7 @@ p {
 }
 
 .form-div::after {
-  background-color: #2A31E3;
+  background-color: #0636E8;
   transform: scaleX(0);
 }
 
@@ -186,11 +187,12 @@ p {
     width: 100%;
     border: none;
     outline: none;
-    padding: 0.8rem 0;
     font-size: 1.6rem;
     color: #fff;
     resize: vertical;
-    height: 4rem;
+    min-height: 4rem;
+    height:4.4rem;
+    padding: 1.3rem 0 0.9rem;
 }
 
 .btn-black {
@@ -198,15 +200,23 @@ p {
     margin-top: 4.2rem;
     font-weight: 500;
     line-height: normal;
+    background: transparent;
     font-size: 1.4rem;
     text-align: center;
     display: block;
     color: #FFFFFF;
     min-width: 19rem;
     height: 4.9rem;
-    background: #02010A;
     cursor: pointer;
-    border: 1px solid #fff;
+    transition: 0.5s;
+    border: 2px solid #FDFFFC;
+    -webkit-transition:0.5s;
+}
+
+.btn-black:hover {
+    border: 2px solid #0636E8;
+      color: #0636E8;
+/*    border: 2px solid rgba(0,160,80,0);*/
 }
 
 .msgs {
@@ -215,7 +225,7 @@ p {
     width: 30vw;
     height: 20vh;
     top: 50%;
-    background-color: #ffffffd1;
+    background-color: #FDFFFCd1;
     color: black;
     z-index: 1;
     left: 50%;
@@ -281,7 +291,7 @@ html {
 
     width: calc(100% - 9rem);
     height: 100%;
-    background-color: white;
+    background-color: #FDFFFC;
     z-index:-1;
 
     position: fixed; 
@@ -447,11 +457,11 @@ h3 {
     width: 100%;
     display: block;
     bottom: 0px;
-    left: 0;
+    left: -100%;
     position: fixed;
     z-index: 0;
 }
-#contact-form {
+#contact-form, #contact-info {
     z-index: 1;
 }
 
@@ -613,10 +623,6 @@ h3 {
         overflow: hidden;
         opacity: 0;
     }   
-
-    .btn-black {
-        width: 100%;
-    }
 }
 
 /* XS responsive */

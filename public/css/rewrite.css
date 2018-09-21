@@ -442,11 +442,11 @@ html {
 h3 {
     font-family: PT Sans;
     font-size: 4.2rem;
-    margin-bottom: 4.1rem;
+    margin-bottom: 3.2rem;
 }
 
 .contact-info-center span {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.7);
     padding-left: .7rem;
 }
@@ -455,6 +455,7 @@ h3 {
     font-size: 2.1rem;
     color: #fff;
     margin-bottom: 1.7rem;
+    margin-top: .5rem;
 }
 
 #contact-animation {
@@ -603,17 +604,6 @@ h3 {
     }
 
 /* XXS 3 screen */
-    .flex-container {
-        overflow: auto; 
-        flex-wrap: wrap;
-    }
-
-    .contact-info-center, .contact-form-center {
-        width: 90%;
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-    }
-
     h3 {
         font-size: 3.5rem;
         margin-bottom: 3.4rem;
@@ -627,17 +617,41 @@ h3 {
         display: none;
     }
 
-    #contact-info, #contact-form {
-        width: 100%;
-    }
-
     #contact-animation {
         width: .01rem;
         position: absolute;
         height: .01rem;
         overflow: hidden;
         opacity: 0;
-    }   
+    }  
+/**************************************/
+    .flex-container {
+        overflow: auto; 
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0 2.1rem;
+    }
+
+    .contact-info-center, .contact-form-center {
+        width: 100%;
+        margin-bottom: 5.5rem;
+    }
+
+    .contact-info-center {
+        margin-top: 7.8rem;
+    }
+
+    .contact-form-center {
+        margin-top: 0;
+    }
+
+    #letter-animation {
+        display: none;
+    }
+
+    #contact-info, #contact-form {
+        width: 100%;
+    }
 }
 
 /* XS responsive */
@@ -758,10 +772,20 @@ h3 {
     .flex-container {
         overflow: auto; 
         flex-wrap: wrap;
+        height: auto;
     }
 
     .contact-info-center, .contact-form-center {
-        margin-bottom: 14rem;
+        max-width: 64.6%;
+        margin-bottom: 5.5rem;
+    }
+
+    .contact-info-center {
+        margin-top: 7.8rem;
+    }
+
+    .contact-form-center {
+        margin-top: 0;
     }
 
     #letter-animation {
@@ -848,6 +872,7 @@ h3 {
     }
 
 /* SM 3 screen */
+
     #letter-animation {
         display: none;
     }
@@ -863,7 +888,10 @@ h3 {
         overflow: hidden;
         opacity: 0;
     }
-    
+
+    .contact-info-center {
+        width:auto;
+    }
 }
 
 /* MD responsive */

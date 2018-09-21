@@ -17,12 +17,9 @@ p {
 }
 
 #logo {
-	position: absolute;
-    width: 78.5%;
-    /*top: 39.6rem;*/
-    left: calc(11.25rem - 0.47%);
-    bottom: 5.6rem;
-    top: auto;
+	position: relative;
+    width: 100%;
+    margin-left: -4px;
 }
 
 .cd-section {
@@ -30,26 +27,60 @@ p {
     -webkit-overflow-scrolling:auto;
 }
 
+.cd-section header {
+    padding: 12.4rem 8.4rem;
+/*    justify-content: space-between;*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.flex-raw {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .index {
     overflow: hidden;
 }
 
-.cd-title {
-    top: 0;
-    width: 70%;
-    max-width: 80rem;
-    margin-top: 13.4rem;
-    margin-left: 11.2rem;
-    padding: 0;
+#index-logo {
+    width:100%;
 }
 
-.cd-title h2 {
+#logo-sign {
+    width:100%;
+    margin-bottom: -0.3rem;
+}
+
+#index-title {
+    width:62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 3.6em;
+}
+
+#index-sign {
+    width:28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#index-title h2 {
     margin-left: -0.1rem;
+    font-size: 4.2rem;
+    font-weight: 300;
+    margin-bottom: 2.4rem;
+    width: 70vw;
 }
 
-.cd-title span {
-    font-size: 2.3rem;
-    line-height: 3rem;
+#index-title span {
+    font-size: 2.1rem;
+    line-height: 3.8rem;
+    opacity: 1;
 }
 
 .row {
@@ -381,7 +412,8 @@ html {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #fdfffc;
+  color: #fff;
+  background: #02010A;
   overflow: hidden;
   display:flex;
   justify-content: space-between;
@@ -400,7 +432,7 @@ html {
 }
 
 .contact-info-center {
-    color: #000;
+    color: #fff;
 }
 
 .contact-form-center {
@@ -415,13 +447,13 @@ h3 {
 
 .contact-info-center span {
     font-size: 1.2rem;
-    color: rgba(2, 1, 10, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     padding-left: .7rem;
 }
 
 .contact-info-center p {
     font-size: 2.1rem;
-    color: #000000;
+    color: #fff;
     margin-bottom: 1.7rem;
 }
 
@@ -429,85 +461,68 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 14rem 0 12.8rem;
     align-items:center;
+    padding: 14.6rem 0 12.8rem;
 }
 
 #letter-animation {
-    color:black;
+    color:#fff;
 }
 
 #contact-logo {
-    width:70%;
+    width: 70%;
     position: relative;
-}
-
-/*#contact-minilogo {
-    width: 100%;
-    display: block;
-    top: 0;
-    position: absolute;
-}*/
-
-#contact-animation {
-    z-index: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #contact-minilogo {
     width: 100%;
     display: block;
-    bottom: 0px;
-    left: -100%;
-    position: fixed;
-    z-index: 0;
-}
-#contact-form, #contact-info {
-    z-index: 1;
+    top: 0;
+    position: absolute;
+    max-width: 12.6rem;
 }
 
 /* XXS responsive */
 /* XXS 1 screen */
 @media (max-width: 419px) {
-    #cd-loading-bar {
-        left: 5.6rem;
+    .cd-section header {
+        padding: 4.2rem 2.8rem;
     }
 
-    #logo {
-        /*position: relative;*/
-        width: 84%;
-        display: block;
-/*        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
-        position: relative;
-        top: 0;
-        left: 0;*/
-        position: absolute;
-        bottom: 2.8rem;
-        top: auto;
-        left: 1.8rem;
+    #index-logo {
+        width:100%;
     }
 
-    .cd-side-navigation {
-        width: 6rem;
+    #logo-sign {
+        height: 7vh;
+        width: auto;
     }
 
-    .cd-side-navigation a {
-        padding: 1.85em 0 1.80em;
-    }
-
-    .cd-title {
-        position: relative;
+    #index-title {
         width: 100%;
-        padding: 1.8rem 2.1rem;
-        margin-top: 0; 
-        margin-left: 0; 
+        margin-top: 1.5rem;
     }
 
-    .cd-title h2 {
-        line-height: initial;
+    #index-title h2 {
+        font-size: 2.1rem;
+        margin-bottom: 0.9rem;
+        line-height: 1.33;
+        width: 100%; 
     }
 
-    .cd-section {
-        padding-left: 5.6rem;
+    #index-title span {
+        font-size: 1.26rem;
+        line-height: 2.5rem;
+        width: 100%;
+    }
+
+    #index-sign {
+        width:100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 2.7rem;
     }
 
 /* XXS 2 screen */
@@ -628,46 +643,41 @@ h3 {
 /* XS responsive */
 /* XS 1 screen */
 @media (min-width: 420px) and (max-width: 767px) {
-    #logo {
-        width: 84%;
-        display: block;
-/*        margin: 10.8rem 2.1rem 2.1rem 1.8rem;
-        position: relative;
-        top: 0;
-        left: 0;*/
-        position: absolute;
-        bottom: 2.8rem;
-        top: auto;
-        left: 1.8rem;
+    .cd-section header {
+        padding: 4.2rem 2.8rem;
     }
 
-    .cd-side-navigation {
-        width: 6rem;
+    #index-logo {
+        width:100%;
     }
 
-    .cd-side-navigation a {
-        padding: 1.85em 0 1.80em;
+    #logo-sign {
+        height: 7vh;
+        width: auto;
     }
 
-    .cd-title {
-        position: relative;
+    #index-title {
         width: 100%;
-        padding: 1.8rem 2.1rem;
-        margin-top: 0; 
-        margin-left: 0; 
+        margin-top: 2.2em;
     }
 
-    .cd-title h2 {
-        /*line-height: 1.33;*/
-        line-height: initial;
+    #index-title h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.6rem;
+        width: 80vw;
     }
 
-    #cd-loading-bar {
-        left: 5.6rem;
-    }
+    #index-title span {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        width: 100%;
+}
 
-    .cd-section {
-        padding-left: 5.6rem;
+    #index-sign {
+        width:100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 2.7rem;
     }
 
 /* XS 2 screen */
@@ -774,37 +784,40 @@ h3 {
 /* SM responsive */
 /* SM 1 screen */
 @media (min-width: 768px) and (max-width: 991px) {
-    #logo {
-        width: 84%;
-        display: block;
-/*        margin: 10.8rem 4.2rem 4.2rem 3.9rem;
-        position: relative;
-        top: 0;
-        left: 0;*/
-        position: absolute;
-        bottom: 4.2rem;
-        top: auto;
-        left: 3.9rem;
-
-    }
-/*
-    .cd-side-navigation {
+    .cd-section header {
+        padding: 5.6rem 4.2rem;
     }
 
-    .cd-side-navigation a {
+    #index-logo {
+        width:100%;
     }
-*/
-    .cd-title {
-        position: relative;
+
+    #logo-sign {
+        height: 7vh;
+        width: auto;
+    }
+
+    #index-title {
         width: 100%;
-        padding: 4.3rem 4.2rem;
-        margin-top: 0; 
-        margin-left: 0; 
+        margin-top: 2.9em;
     }
 
-    .cd-title h2 {
-        /*line-height: 1.33;*/
-        line-height: initial;
+    #index-title h2 {
+        font-size: 3.5rem;
+        margin-bottom: 2.3rem;
+    }
+
+    #index-title span {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        width:60%;
+    }
+
+    #index-sign {
+        width:100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 2.7rem;
     }
 
 /* SM 2 screen */

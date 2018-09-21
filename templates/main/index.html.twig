@@ -26,12 +26,24 @@
 	<main class="cd-main">
 		<section class="cd-section index visible">
 			<header>
-				<div class="cd-title">
+				<div id="index-logo">
+					<img src="{{ asset('img/logo.png') }}" id="logo">
+				</div>
+				<div class="flex-raw">
+					<div id="index-title">
+						<h2>{{site_name}}</h2>
+						<span>{{site_description | raw}}</span>
+					</div>
+					<div id="index-sign">
+						<img src="{{ asset('img/logo-sign.png') }}" id="logo-sign">
+					</div>
+				</div>
+				<!-- <div class="cd-title">
 					<h2>{{site_name}}</h2>
 					<span>{{site_description}}</span>
 
 				</div>
-			<img src="{{ asset('img/logo.png') }}" id="logo">
+				<img src="{{ asset('img/logo.png') }}" id="logo"> -->
 			</header>
 
 		</section> <!-- .cd-section -->

@@ -15,11 +15,11 @@ body {
   font-size: 1.6rem;
   font-family: "PT Sans", sans-serif;
   color: #fff;
-  background-color: #FDFFFC;
+  background-color: #02010A;
 }
 
 a {
-  color: #02010A;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ Navigation
   height: 100%;
   width: -webkit-calc(100% - 4px);
   width: calc(100% - 4px);
-  background-color: #fff;
+  background-color: #02010A;
 }
 .cd-side-navigation ul {
   height: 100%;
@@ -63,7 +63,7 @@ Navigation
   padding: 4em 0 1.5em;
   font-size: 1.2rem;
   text-align: center;
-  color: #000000;
+  color: #fff;
   -webkit-transition: background-color 0.2s, color 0.2s;
   -moz-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
@@ -195,7 +195,7 @@ Navigation
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #fdfffc;
+  background: #02010A;
   overflow: hidden;
 }
 
@@ -203,10 +203,7 @@ Navigation
   background-color: #02010A;
 }
 .cd-section.contacts header {
-  background-color: #f7f7f2;
-}
-.cd-section.contact header {
-  background-color: #e4b162;
+  background-color: #02010A;
 }
 .cd-section .cd-scroll {
   /* this is the arrow at the bottom of the header */
@@ -325,7 +322,7 @@ Navigation
   /* this prevents title from jumping when the section scroll bar is visible */
   width: calc(100vw - 90px);
   padding: 1em;
-  color: #000000;
+  color: #fff;
   text-align: left;
   /* Force Hardware Acceleration */
   -webkit-backface-visibility: hidden;
@@ -345,14 +342,8 @@ Navigation
   -moz-transition: -moz-transform 0s 0.5s, opacity 0s 0.5s;
   transition: transform 0s 0.5s, opacity 0s 0.5s;
 }
-.cd-title h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.cd-title span {
-  opacity: 1;
-}
+
+
 .visible .cd-title {
   opacity: 1;
   -webkit-transform: translateY(0%);

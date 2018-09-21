@@ -32,7 +32,7 @@ p {
 /*    justify-content: space-between;*/
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .flex-raw {
@@ -490,6 +490,7 @@ h3 {
 @media (max-width: 419px) {
     .cd-section header {
         padding: 4.2rem 2.8rem;
+        flex-direction: column;
     }
 
     #index-logo {
@@ -659,6 +660,7 @@ h3 {
 @media (min-width: 420px) and (max-width: 767px) {
     .cd-section header {
         padding: 4.2rem 2.8rem;
+        flex-direction: column;
     }
 
     #index-logo {
@@ -810,6 +812,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
     .cd-section header {
         padding: 5.6rem 4.2rem;
+        flex-direction: column;
     }
 
     #index-logo {

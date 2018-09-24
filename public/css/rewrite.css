@@ -564,18 +564,18 @@ h3 {
     }
 
     #project-name {
-        font-size: 2.1rem;
+        font-size: 1.4rem;
         max-width: 42rem;
     }
 
     #project-title {
-        font-size: 2.8rem;
-        margin: 1.3rem 0;
+        font-size: 2.1rem;
+        margin: 1.1rem 0;
     }
 
     #project-description {
-        font-size: 2.8rem;
-        margin-bottom: 2.8rem;
+        font-size: 1.4rem;
+        margin-bottom: 2.1rem;
     }
 
     #project-detail {
@@ -962,4 +962,38 @@ h3 {
 /* XXL 3 screen */
 
     
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) and (max-device-width: 900px) {
+    .cd-section header {
+        overflow: scroll;
+        flex-direction: row;
+    }
+
+    .flex-raw {
+        width: 100%;
+    }
+
+    #logo-sign {
+        height: 8.5vh;
+        width: auto;
+    }
+}
+
+/* Landscape*/
+
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+    .cd-section header {
+        overflow: scroll;
+        height: auto; 
+    }
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    .cd-section header {
+        height: auto; 
+        overflow: scroll;
+    }
 }

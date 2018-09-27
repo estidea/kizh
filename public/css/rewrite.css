@@ -114,7 +114,7 @@ p {
 }
 
 .img-row p {
-    width: 90%;
+    width: 100%;
     font-size: 2.1rem;
 }
 
@@ -781,7 +781,7 @@ h3 {
     }
 
     .img-row p {
-        width: 90%;
+        width: 100%;
     }
 /* XS 3 screen */
 

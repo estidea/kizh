@@ -118,6 +118,10 @@ p {
     font-size: 2.1rem;
 }
 
+.img-p-6 {
+    margin-bottom:1.5rem;
+}
+
 .img-4 {
     width: 32% !important;
     height: auto !important;
@@ -532,6 +536,14 @@ h3 {
     }
 
 /* XXS 2 screen */
+    #project-title {
+        max-width: 100%;
+    }
+
+    #project-description {
+        max-width: 100%;
+    }
+
     .prt-6 {
         width: 100%;
         float: left;
@@ -583,8 +595,8 @@ h3 {
     }
 
     #project-detail {
-        width: calc(100% - 5.6rem);
-        left: 5.6rem;
+        width: calc(100% - 7rem);
+        left: 7rem;
         padding: 4.8rem 2rem;
     }
 
@@ -604,7 +616,6 @@ h3 {
 
     .img-row p {
         width: 100%;
-        margin-bottom: 1.5rem;
         font-size: 1.4rem;
     }
 
@@ -750,8 +761,8 @@ h3 {
     }
 
     #project-detail {
-        width: calc(100% - 5.6rem);
-        left: 5.6rem;
+        width: calc(100% - 7rem);
+        left: 7rem;
         padding: 6.3rem 4.1rem;
     }
 
@@ -771,7 +782,6 @@ h3 {
 
     .img-row p {
         width: 90%;
-        margin-bottom: 1.5rem;
     }
 /* XS 3 screen */
 

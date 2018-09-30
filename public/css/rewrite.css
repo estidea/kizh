@@ -282,9 +282,24 @@ html {
     overflow-x: hidden;*/
 }
 
-::-webkit-scrollbar {
-    width: 0rem;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #FDFFFC;
+    background-color: #FDFFFC;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #0636E8;
+    background-color: #0636E8;
+}
+
+::-webkit-scrollbar-track{
+    border-width:0;
 }
 
 .hover-overlay {

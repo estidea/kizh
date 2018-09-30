@@ -196,7 +196,7 @@ Navigation
   height: 100vh;
   width: 100%;
   background: #02010A;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 #portfolio-content {

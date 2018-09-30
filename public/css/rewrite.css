@@ -277,10 +277,6 @@ p {
 
 
 /*  ANTI SCROLL*/
-html {
-/*    overflow: scroll;
-    overflow-x: hidden;*/
-}
 
 ::-webkit-scrollbar{
     width:12px;
@@ -288,8 +284,8 @@ html {
 
 ::-webkit-scrollbar-thumb{
     border-width:1px 1px 1px 2px;
-    border-color: #FDFFFC;
-    background-color: #FDFFFC;
+    border-color: #02010A;
+    background-color: #02010A;
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -300,6 +296,7 @@ html {
 
 ::-webkit-scrollbar-track{
     border-width:0;
+    background-color: rgba(230, 230, 230, 1);
 }
 
 .hover-overlay {

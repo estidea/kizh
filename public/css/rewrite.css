@@ -998,7 +998,8 @@ h3 {
 /* Landscape */
 @media screen and (orientation:landscape) and (max-device-width: 900px) {
     .cd-section header {
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x:hidden;
         flex-direction: row;
     }
 
@@ -1016,7 +1017,8 @@ h3 {
 
 @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
     .cd-section header {
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x:hidden;
         height: auto; 
     }
 }
@@ -1025,6 +1027,7 @@ h3 {
 @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
     .cd-section header {
         height: auto; 
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x:hidden;
     }
 }

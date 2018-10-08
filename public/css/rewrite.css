@@ -625,6 +625,12 @@ h3 {
         height: auto !important;
     }
     
+    .img-4 {
+        width: 100% !important;
+        margin-bottom: 4.2rem;
+    }
+
+    
     .img-6 {
         margin-bottom: 1.4rem;
     }
@@ -790,6 +796,11 @@ h3 {
     .img-37, .img-63, .img-6 {
         width: 100% !important;
         height: auto !important;
+    }
+
+    .img-4 {
+        width: 64% !important;
+        margin-bottom: 4.2rem;
     }
     
     .img-6 {

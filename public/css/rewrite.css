@@ -261,17 +261,17 @@ p {
 .msgs {
     display: none;
     position: absolute;
-    width: 30vw;
-    height: 20vh;
     top: 50%;
-    background-color: #FDFFFCd1;
-    color: black;
     z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     font-size: 2.1rem;
     align-items: center;
+    top: 50%;
+    background-color: #0636e8;
+    color: white;
+    padding: 2.1rem;
 }
 
 

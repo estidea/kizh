@@ -20,11 +20,13 @@ $(document).ready(function () {
         var formNm = $('#' + formID);
         var message = $(formNm).find(".msgs"); // Ищес класс .msgs в текущей форме  и записываем в переменную
         // var formTitle = $(formNm).find(".formTitle"); // Ищес класс .formtitle в текущей форме и записываем в переменную
+        $(".loader-1").css('display','block');
         $.ajax({
             type: "POST",
             url: '/mail',
             data: formNm.serialize(),
             success: function (data) {
+              $(".loader-1").css('display','none');
               // Вывод сообщения об успешной отправке
               message.css('display','flex');
               message.html('Письмо успешно отправлено!');
@@ -49,6 +51,7 @@ $(document).ready(function () {
               }, 3000);
             },
             error: function (jqXHR, text, error) {
+                $(".loader-1").css('display','none');
                 // Вывод сообщения об ошибке отправки
                 message.css('display','flex');
                 message.html('К сожалению, на сервере возникла проблема =( С нас 10% скидка');

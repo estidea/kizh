@@ -40,7 +40,7 @@
 						<h3>Форма</h3>
 						<form id="contactForm" name="sentMessage" autocomplete="off">
 							<!-- <p class="formTitle"></p> -->
-							<p class="msgs"></p>
+							<p class="msgs">Ваше письмо успешно отправлено.</p>
 							<div class="form-div">
 								<label for="username" class="form-label">Ваше имя</label>
 								<input class="form-input" id="username" name="uname" type="text" tabindex="0" required data-validation-required-message="Пожалуйста, введите ваше имя">
@@ -67,6 +67,10 @@
 						<img onload="initForm()" src="{{ asset('img/logo-sign-vert.png') }}" id="contact-minilogo">
 		    		</div>
 		    	</div>
+		    	<div class="loader loader-1">
+					<div class="loader-outter"></div>
+					<div class="loader-inner"></div>
+			    </div>
 			</div>
 		</section> <!-- .cd-section -->
 	</main> <!-- .cd-main -->

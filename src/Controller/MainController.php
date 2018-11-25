@@ -81,7 +81,6 @@ class MainController extends Controller
     public function contacts()
     {
         return $this->render('main/contacts.html.twig', [
-            'controller_name' => 'MainController',
         ]);
     }
 
@@ -109,32 +108,21 @@ class MainController extends Controller
         else return $this->redirectToRoute('contacts');
     }
 
-          
+    /**
+     * @Route("/web", name="web")
+     */
+    public function web()
+    {
+        return $this->render('landings/web.html.twig', [
+        ]);
+    }
 
-    //         $to = "nick.whatsoever@gmail.com"; Укажите адрес, на который должно приходить письмо
-    //         $sendfrom = "vlastelin@kizh.tk"; /*Укажите адрес, с которого будет приходить письмо */
-    //         $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
-    //         $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
-    //         $headers .= "MIME-Version: 1.0\r\n";
-    //         $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
-    //         $headers .= "Content-Transfer-Encoding: 8bit \r\n";
-    //         $subject = "$formInfo";
-    //         $message = "$unameFieldset $uname
-    //                     $connect_methodFieldset $connect_method
-    //                     $messageFieldset $message
-    //                     $formInfoFieldset $formInfo";
-
-    //         $send = mail ($to, $subject, $message, $headers);
-    //             if ($send == 'true') {
-    //                 echo '<p class="success">Спасибо за отправку вашего сообщения!</p>';
-    //             } else {
-    //               echo '<p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p>';
-    //             }
-    //       } else {
-    //         echo '<p class="fail">Ошибка. Вы заполнили не все обязательные поля!</p>';
-    //       }
-    //     } else {
-    //       header ("Location: http://kizh.tk"); // главная страница вашего лендинга
-    //     }
-    // }
+    /**
+     * @Route("/branding", name="branding")
+     */
+    public function branding()
+    {
+        return $this->render('landings/branding.html.twig', [
+        ]);
+    }
 }

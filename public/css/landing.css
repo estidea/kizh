@@ -522,12 +522,26 @@ canvas {
   height: 32px;
 }
 
+.messenger-container {
+  display: flex;
+  justify-content: center;
+}
+
+.messenger-three {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+
 .social-link {
+  margin: 0 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
+  min-width: 5rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
   background-color: #ffffff;
@@ -540,7 +554,6 @@ canvas {
 .social-link:hover {
   background-color: #4968f2;
   text-decoration: none;
-
 }
 
 .social-link:hover img {

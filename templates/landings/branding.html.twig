@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Разработка веб-сайтов любой сложности и тематики в соответствии с потребностями вашего бизнеса.">
+    <meta name="description" content="Разработаем для вас логотип, фирменный стиль и дизайн упаковки товара.">
     <meta name="author" content="Студия Киреева-Журенко">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
@@ -175,17 +175,58 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="contact-section bg-black">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <img id="mess" src="{{ asset('img/landing/mess.svg') }}">
+                <h4 class="text-uppercase m-0">Viber/Telegram</h4>
+                <hr class="my-4">
+                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2 fa-2x"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4">
+                <div class="text-black-50">
+                  <a href="mailto:kizh.studio@gmail.com">kizh.studio@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2 fa-2x"></i>
+                <h4 class="text-uppercase m-0">Телефон</h4>
+                <hr class="my-4">
+                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Сделать заказ</h2>
+            <h2 class="section-heading closer-heading">Сделать заказ</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate data-aos="fade-up">
-              <div class="row">
+            <form id="contactForm" name="sentMessage" novalidate>
+              <div class="row contact-center">
                 <div class="col-md-6" >
                   <div class="form-group">
                     <input class="form-control" id="name" type="text" placeholder="Имя*" required data-validation-required-message="Please enter your name.">
@@ -196,12 +237,7 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Кратко о проекте*" required data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
+                <input id="formInfo" name="formInfo" class="formInfo" type="hidden" value="branding-form" title="branding-form"/>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
@@ -215,48 +251,7 @@
     </section>
 
     <!-- Contact Buttons from GreyScale -->
-    <section class="contact-section bg-black">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <img id="mess" src="{{ asset('img/landing/mess.svg') }}">
-                <h4 class="text-uppercase m-0">Viber/Telegram</h4>
-                <hr class="my-4">
-                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="50">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2 fa-2x"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
-                <hr class="my-4">
-                <div class="text-black-50">
-                  <a href="#">kizh.studio@gmail.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2 fa-2x"></i>
-                <h4 class="text-uppercase m-0">Телефон</h4>
-                <hr class="my-4">
-                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -269,6 +264,11 @@
       </div>
     </footer>
 
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('js/jquery-2.1.4.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -284,10 +284,8 @@
     <script src="{{ asset('js/landing.min.js') }}"></script>
     <script src="{{ asset('js/canvas.js') }}"></script>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    
+    
   </body>
 
 </html>

@@ -109,6 +109,32 @@ class MainController extends Controller
     }
 
     /**
+     * @Route("/mail-landing", name="mail-landing")
+     */
+    public function mailLanding(Request $request, \Swift_Mailer $mailer)
+    {   
+        if($request->request->get('name')){
+            $name = $request->request->get('name');
+            $phone = $request->request->get('phone');
+            $form_info = $request->request->get('formInfo');
+            $message = (new \Swift_Message('New client'))
+                ->setSubject($form_info)
+                ->setFrom('vlastelin@kizh.studio')
+                ->setTo('nick.whatsoever@gmail.com')
+                ->setBody('Name = '.$name.', formInfo = '.$form_info.', phone = '.$phone);
+
+            $mailer->send($message);
+            if($form_info == 'branding-form') {
+                return $this->redirectToRoute('branding');
+            } else {
+                return $this->redirectToRoute('web');
+            }
+            
+        }
+        else return $this->redirectToRoute('branding');
+    }
+
+    /**
      * @Route("/web", name="web")
      */
     public function web()

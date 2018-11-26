@@ -284,6 +284,7 @@ section#contact {
 }
 
 section#contact .section-heading {
+  margin-top: 5rem;
   color: #fff;
 }
 
@@ -333,6 +334,10 @@ section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.contact-center {
+  justify-content: center;
 }
 
 footer {
@@ -402,7 +407,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .bg-black {
-  padding: 0 0 5rem;
+  padding: 5rem 0;
   background-color: #22262a;
 }
     
@@ -496,3 +501,11 @@ canvas {
 .card {
     border-radius: 0;
 }*/
+
+.closer-heading {
+  margin-bottom: 3rem;
+}
+
+#sendMessageButton {
+  margin-top: 1rem;
+}

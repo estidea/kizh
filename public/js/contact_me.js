@@ -11,8 +11,10 @@ $(function() {
       var name = $("input#name").val();
       // var email = $("input#email").val();
       var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
+      // var message = $("textarea#message").val();
+      var formInfo = $("input#formInfo").val();
       var firstName = name; // For Success/Failure Message
+
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
@@ -20,13 +22,14 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: "/mail-landing",
         type: "POST",
         data: {
           name: name,
           phone: phone,
+          formInfo: formInfo
           // email: email,
-          message: message
+          // message: message
         },
         cache: false,
         success: function() {

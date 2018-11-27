@@ -430,7 +430,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 @media (max-width: 767px) {
   .showcase .showcase-img {
-    min-height: 20rem;
+    min-height: 13rem;
   }
 }
 
@@ -532,7 +532,6 @@ canvas {
   justify-content: center;
   margin-bottom: 1rem;
 }
-
 
 .social-link {
   margin: 0 1rem 1rem 1rem;

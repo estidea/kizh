@@ -72,7 +72,6 @@
         </div>
       </div>
     </header>
-
     <!-- Image Showcases -->
     <section id="services" class="showcase">
       <div class="row">
@@ -82,22 +81,123 @@
         </div>
       <div class="container-fluid p-0">
         <div class="row no-gutters" data-aos="fade-up">
-
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ asset('img/landing/services-logo.jpg') }} ');"></div>
+              <div id="carouselLogo" class="col-lg-6 order-lg-2 text-white showcase-img carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselLogo" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselLogo" data-slide-to="1"></li>
+                  <li data-target="#carouselLogo" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/logo-example-1x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/logo-example-1.jpg') }}" alt="Разработка логотипов">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                     <picture>
+                     <source srcset="{{ asset('img/landing/logo-example-2x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/logo-example-2.jpg') }}" alt="Разработка логотипов">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/logo-example-3x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/logo-example-3.jpg') }}" alt="Разработка логотипов">
+                    </picture>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselLogo" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselLogo" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div> 
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Разработка логотипов</h2>
             <p class="lead mb-0">Создание уникального знака для вашего бизнеса, который будет отражать ключевые особенности вашего товара/услуги.</p>
           </div>
         </div>
         <div class="row no-gutters" data-aos="fade-up">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{ asset('img/landing/services-identity.jpg') }} ');"></div>
+          <div id="carouselBrand" class="col-lg-6 text-white showcase-img carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselBrand" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselBrand" data-slide-to="1"></li>
+                  <li data-target="#carouselBrand" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/identity-example-1x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/identity-example-1.jpg') }}" alt="Разработка фирменного стиля">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/identity-example-2x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/identity-example-2.jpg') }}" alt="Разработка фирменного стиля">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/identity-example-3x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/identity-example-3.jpg') }}" alt="Разработка фирменного стиля">
+                    </picture>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselBrand" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselBrand" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div> 
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Разработка фирменного стиля</h2>
             <p class="lead mb-0">Внешний вид бренда, по которому ваш бизнес будут запоминать и узнавать партнёры и клиенты. Также создание брендбука – системы указаний для производства рекламной продукции.</p>
           </div>
         </div>
         <div class="row no-gutters" data-aos="fade-up">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ asset('img/landing/services-package.jpg') }} ');"></div>
+          <div id="carouselPackage" class="col-lg-6 order-lg-2 text-white showcase-img carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselPackage" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselPackage" data-slide-to="1"></li>
+                  <li data-target="#carouselPackage" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/package-example-1x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/package-example-1.jpg') }}" alt="Дизайн упаковки">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/package-example-2x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/package-example-2.jpg') }}" alt="Дизайн упаковки">
+                    </picture>
+                  </div>
+                  <div class="carousel-item">
+                    <picture>
+                     <source srcset="{{ asset('img/landing/package-example-3x05.jpg') }}" media="(max-width: 450px)">
+                     <img class="d-block w-100" src="{{ asset('img/landing/package-example-3.jpg') }}" alt="Дизайн упаковки">
+                    </picture>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselPackage" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselPackage" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div> 
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Дизайн упаковки</h2>
             <p class="lead mb-0">Разработка продающей формы для вашего товара. Эффективное решение по подбору материала, созданию типографики и цветовой гаммы.</p>
@@ -105,7 +205,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Services -->
     <section id="advantages">
       <div class="container">
@@ -176,43 +276,26 @@
 
     <!-- Contact -->
     <section id="contact" class="contact-section bg-black">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <img id="mess" src="{{ asset('img/landing/mess.svg') }}">
-                <h4 class="text-uppercase m-0">Viber/Telegram</h4>
-                <hr class="my-4">
-                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
-              </div>
-            </div>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading closer-heading">Свяжитесь с нами удобным способом</h2>
           </div>
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2 fa-2x"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
-                <hr class="my-4">
-                <div class="text-black-50">
-                  <a href="mailto:kizh.studio@gmail.com">kizh.studio@gmail.com</a>
-                </div>
-              </div>
-            </div>
+        </div>
+      <div class="container text-center">
+        <div class="messenger-container row">
+          <div class="messenger-three col-lg-12">
+            <a class="social-link rounded-circle text-white mr-3" title="WhatsApp" href="https://api.whatsapp.com/send?phone=380677180799"><img class="messenger-img" src="{{ asset('img/landing/whatsapp.svg') }}"></a>
+          
+            <a class="social-link rounded-circle text-white mr-3" title="Telegram" href="tg://resolve?domain=dumap1k"><img class="messenger-img telegram-icon" src="{{ asset('img/landing/telegram.svg') }}"></a>
+          
+            <a class="social-link rounded-circle text-white mr-3" title="Viber" href="viber://add?number=+380677180799"><img class="messenger-img" src="{{ asset('img/landing/viber.svg') }}"></a>
           </div>
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2 fa-2x"></i>
-                <h4 class="text-uppercase m-0">Телефон</h4>
-                <hr class="my-4">
-                <div class="text-black-50"><a href="tel:+38(067)7180799">+38 (067) 718 0799</a></div>
-              </div>
-            </div>
+          <div class="messenger-three col-lg-12">
+            <a class="social-link rounded-circle text-white mr-3" title="Skype" href="skype:hq-info?chat"><img class="messenger-img" src="{{ asset('img/landing/skype.svg') }}"></a>
+          
+            <a class="social-link rounded-circle text-white mr-3" title="Email" href="mailto:kizh.studio@gmail.com"><img class="messenger-img" src="{{ asset('img/landing/mail.svg') }}"></a>
+          
+            <a class="social-link rounded-circle text-white mr-3" title="Phone" href="tel:+380677180799"><img class="messenger-img" src="{{ asset('img/landing/tel.svg') }}"></a>
           </div>
         </div>
       </div>
@@ -249,8 +332,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Contact Buttons from GreyScale -->
     
 
     <!-- Footer -->

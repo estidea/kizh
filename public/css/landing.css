@@ -1,27 +1,12 @@
-@font-face {
-  font-family: 'Akrobat Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Akrobat Regular'), url('../fonts/Akrobat-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Akrobat Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Akrobat Bold'), url('../fonts/Akrobat-Bold.woff') format('woff');
-}
-@font-face {
-  font-family: 'Akrobat ExtraLight';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Akrobat ExtraLight'), url('../fonts/Akrobat-ExtraLight.woff') format('woff');
-}
-
 body {
   width:100vw;
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #fcfcfc;
+}
+
+* {
+  font-family: 'Open Sans';
 }
 
 p {
@@ -46,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-left:-1px;
   font-weight: 700;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -417,20 +403,20 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .showcase .showcase-img {
-  min-height: 30rem;
+  /*min-height: 30rem;*/
   background-size: cover;
   background-position: center center;
 }
 
 @media (min-width: 768px) {
   .showcase .showcase-text {
-    padding: 7rem;
+    padding: 5rem;
   }
 }
 
 @media (max-width: 767px) {
   .showcase .showcase-img {
-    min-height: 13rem;
+    /*min-height: 13rem;*/
   }
 }
 
@@ -558,4 +544,19 @@ canvas {
 .social-link:hover img {
   -webkit-filter: invert(100%);
   filter: invert(100%);
+}
+
+@media (min-width: 992px) and (max-width: 1260px) {
+  .showcase .showcase-text {
+    padding: 3.6rem;
+  }  
+
+  .showcase .showcase-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .showcase .showcase-text .lead {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
 }
